@@ -1,0 +1,89 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "pragmatic_script",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.pragmatic_script",
+					"match": "\\b(if|while|for|return|break|continue|loop|else)\\b"
+				},
+				{
+					"name": "keyword.decl.pragmatic_script",
+					"match": "\\b(import|fn|mod|cont|impl|intf|pub|static|var)\\b"
+				},
+				{
+					"name": "keyword.other.pragmatic_script",
+					"match": "\\b(int|string|float|bool|this)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.pragmatic_script",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.pragmatic_script",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.line.double-slash.pragmatic_script",
+					"begin": "//",
+					"end": "\n"
+				},
+				{
+					"name": "comment.line.number-sign.pragmatic_script",
+					"begin": "#",
+					"end": "\n"
+				},
+				{
+					"name": "comment.multi-line.pragmatic_script",
+					"begin": "/*",
+					"end": "*/"
+				}
+			]
+		},
+		"operators": {
+			"patterns": [
+				{
+					"name": "operator.binary.pragmatic_script", 
+					"match": "\\b(<|>|=|==|+=|-=|*=|/=|!=|<=|>=)\\b"
+				},
+				{
+					"name": "operator.unary.pragmatic_script",
+					"match": "\\b(!|&|~)\\b“"
+				},
+				{
+					"name": "operator.accessor.pragmatic_script",
+					"match": "\\b(..|.|:|::)\\b"
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+					"name": "delimiter.pragmatic_script",
+					"match": "\\b({|}|(|)|,|[|]|~|;)\\b"
+				},
+				{
+					"name": "integer.pragmatic_script",
+					"match": "[0-9]+"
+				}
+			]
+		}
+	},
+	"scopeName": "source.pgs"
+}

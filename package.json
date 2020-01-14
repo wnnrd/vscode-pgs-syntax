@@ -1,0 +1,25 @@
+{
+    "name": "vscode-pgs-syntax",
+    "displayName": "pragmatic_script Language Support",
+    "description": "Provides syntax highlighting for the pragmatic_script scripting language",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.41.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "pragmatic_script",
+            "aliases": ["pragmatic_script", "pragmatic_script"],
+            "extensions": [".pgs"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "pragmatic_script",
+            "scopeName": "source.pgs",
+            "path": "./syntaxes/pragmatic_script.tmLanguage.json"
+        }]
+    }
+}
