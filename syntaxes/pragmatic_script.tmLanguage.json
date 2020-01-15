@@ -7,6 +7,12 @@
 		},
 		{
 			"include": "#strings"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#constants"
 		}
 	],
 	"repository": {
@@ -51,36 +57,20 @@
 				},
 				{
 					"name": "comment.multi-line.pragmatic_script",
-					"begin": "/*",
-					"end": "*/"
-				}
-			]
-		},
-		"operators": {
-			"patterns": [
-				{
-					"name": "operator.binary.pragmatic_script", 
-					"match": "\\b(<|>|=|==|+=|-=|*=|/=|!=|<=|>=)\\b"
-				},
-				{
-					"name": "operator.unary.pragmatic_script",
-					"match": "\\b(!|&|~)\\b“"
-				},
-				{
-					"name": "operator.accessor.pragmatic_script",
-					"match": "\\b(..|.|:|::)\\b"
+					"begin": "/\\*",
+					"end": "\\*/"
 				}
 			]
 		},
 		"constants": {
 			"patterns": [
 				{
-					"name": "delimiter.pragmatic_script",
-					"match": "\\b({|}|(|)|,|[|]|~|;)\\b"
+					"name": "constant.numeric.pragmatic_script",
+					"match": "[0-9]"
 				},
 				{
-					"name": "integer.pragmatic_script",
-					"match": "[0-9]+"
+					"name": "constant.character.pragmatic_script",
+					"match": "\\b({|}|(|)|,|[|]|~|;|..|.|:|::|<|>|=|==|\\+=|-=|\\*=|/=|!=|<=|>=|!|&|~)\\b“"
 				}
 			]
 		}
